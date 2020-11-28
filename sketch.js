@@ -1,10 +1,9 @@
 /*
- * @name Flocking
- * @description Demonstration of Craig Reynolds' "Flocking" behavior.
+ * Flocking Demonstration
+ * Demonstration of Craig Reynolds' "Flocking" behavior in a game
  * See: http://www.red3d.com/cwr/
  * Rules: Cohesion, Separation, Alignment
  * (from <a href="http://natureofcode.com">natureofcode.com</a>).
- *  Drag mouse to add boids into the system.
  */
 
 let flock;
@@ -42,7 +41,7 @@ function draw() {
     textSize(width/15)
     stroke(244,0,144)
     fill(244,0,144)
-    text('Mouse out of range',  width/4,height/2);
+    text('Pointer out of range',  width/4,height/2);
   }
   
     
