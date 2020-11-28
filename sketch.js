@@ -28,9 +28,9 @@ function draw() {
   //let t = map(random(mouseX,mouseY),0,1,0.5,1.5);
   fill(244,0,148)
   stroke(244,0,144)
-  ellipse(mouseX,mouseY,80,80)
-    fill(222,0,127)
   ellipse(mouseX,mouseY,50,50)
+    fill(222,0,127)
+  ellipse(mouseX,mouseY,35,35)
   fill(255,0,80)
   
   ellipse(mouseX,mouseY,20,20)
@@ -130,14 +130,17 @@ Boid.prototype.flock = function(boids) {
   let sep = this.separate(boids);   // Separation
   let ali = this.align(boids);      // Alignment
   let coh = this.cohesion(boids);   // Cohesion
+  let FoM = this.FollowMouse(boids);// Follow Mouse
   // Arbitrarily weight these forces
   sep.mult(1.5);
   ali.mult(1.0);
   coh.mult(1.0);
+  FoM.mult(1.5)
   // Add the force vectors to acceleration
   this.applyForce(sep);
   this.applyForce(ali);
   this.applyForce(coh);
+  this.applyForce(FoM);
 }
 
 // Method to update location
@@ -182,7 +185,7 @@ Boid.prototype.render = function() {
   arc(0,0+2*this.r+7*tailDim/2,tailDim*tail,tailDim,3*PI/2,PI/2)
 
   pop();
-  if (abs(this.position.x - mouseX) <50 && abs(this.position.y-mouseY) <50){
+  if (abs(this.position.x - mouseX) <20 && abs(this.position.y-mouseY) <20){
     GameOver =1;
   }
 }
@@ -276,10 +279,13 @@ Boid.prototype.cohesion = function(boids) {
   }
 }
 
-// Kill Boids
-Boid.prototype.kill = function(boids){
+Boid.prototype.FollowMouse = function(boids){
+  let neighbordist = 150;
+  d = p5.Vector.dist(this.position,createVector(mouseX,mouseY))
   
-  
-  
+  if (d<neighbordist) {
+    return this.seek(createVector(mouseX,mouseY))}
+  else {
+    return createVector(0,0)
+  }
 }
-
