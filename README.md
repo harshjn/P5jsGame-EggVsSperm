@@ -1,8 +1,8 @@
 # P5jsGame-EggVsSperm
-A processing game that demonstrates flocking.
+A processing game that demonstrates herd behaviour.
 Game can be accessed at https://harshjn.github.io/P5jsGame-EggVsSperm/
 
-Every element of the flock(also known as vehicle) has a predefined target (egg in this case), but it is able to observe only a narrow neighbourhood around it. 
+Every element of the flock (also known as vehicle) has a predefined target (egg in this case), but it is able to observe only a narrow neighbourhood around it. 
 Therefore, it makes decisions about which direction it wants to move in based on the following factors:
 * Whether it can find the target in it's neighbourhood (seek the target).
 * What direction other vehicles around it are moving in (follow the herd).
