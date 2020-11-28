@@ -1,6 +1,6 @@
 /*
- * Flocking Demonstration in a game
- * Demonstration of Craig Reynolds' "Flocking" behavior in a game
+ * Flocking Demonstration.
+ * Demonstration of Craig Reynolds' "Flocking" behavior in a game.
  * See: http://www.red3d.com/cwr/
  * Rules: Cohesion, Separation, Alignment
  * (from <a href="http://natureofcode.com">natureofcode.com</a>).
