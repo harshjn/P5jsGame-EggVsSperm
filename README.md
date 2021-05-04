@@ -1,4 +1,4 @@
-# Oh F*ck - The Game
+# EggVsSperm - The Game
 A processing game that demonstrates herd behaviour.
 Game can be accessed at https://harshjn.github.io/P5jsGame-EggVsSperm/
 
