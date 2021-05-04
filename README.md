@@ -1,4 +1,4 @@
-# P5jsGame-EggVsSperm
+# P5jsGame-Reproduction
 A processing game that demonstrates herd behaviour.
 Game can be accessed at https://harshjn.github.io/P5jsGame-EggVsSperm/
 
